@@ -36,9 +36,8 @@ public class Controller {
 
 
     public static ArrayList<AudioParser> mp3List = new ArrayList<>();
-    public static ArrayList<String> mp3ArtistList = new ArrayList<>();
-    public static ArrayList<String> mp3AlbumList = new ArrayList<>();
-    public ObservableList<String> trackNameList;
+public static ArrayList<String> mp3ArtistList = new ArrayList<>();
+               public static ArrayList<String> mp3AlbumList = new ArrayList<>(); public ObservableList<String> trackNameList;
     private void convertFilesToListView()
     {
         ArrayList<String> trackNameTempList = new ArrayList<>();
@@ -163,7 +162,6 @@ public class Controller {
     public void init()
     {
         convertFilesToListView();
-        createGenresListView();
         createAlbumsListView();
         createArtistsListView();
     }
