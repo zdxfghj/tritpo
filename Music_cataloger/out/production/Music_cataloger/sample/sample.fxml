@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="585.0" prefWidth="940.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+        <TabPane layoutX="14.0" layoutY="14.0" prefHeight="557.0" prefWidth="280.0" side="LEFT" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Tracks">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <ListView fx:id="trackList_Tracks" layoutY="-5.0" onMouseClicked="#trackList_Tracks_OnClick" prefHeight="388.0" prefWidth="141.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Genre">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <ListView fx:id="trackList_Genres" onMouseClicked="#trackList_Genres_OnClick" prefHeight="388.0" prefWidth="141.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Album">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <ListView fx:id="trackList_Albums" layoutY="6.0" onMouseClicked="#trackList_Albums_OnClick" prefHeight="388.0" prefWidth="141.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Artist">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <ListView fx:id="trackList_Artists" onMouseClicked="#trackList_Artists_OnClick" prefHeight="388.0" prefWidth="141.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+        <TabPane layoutX="304.0" layoutY="14.0" prefHeight="310.0" prefWidth="627.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Album">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="280.0" prefWidth="592.0">
+                            <children>
+                                <TextFlow fx:id="albumLabel" layoutX="14.0" layoutY="14.0" prefHeight="281.0" prefWidth="592.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Genre">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <TextFlow fx:id="genreLabel" layoutX="14.0" layoutY="14.0" prefHeight="306.0" prefWidth="592.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Artist">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="183.0" prefWidth="460.0">
+                            <children>
+                                <TextFlow fx:id="artistLabel" layoutX="14.0" layoutY="14.0" prefHeight="306.0" prefWidth="592.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+        <ListView fx:id="currentTagTrackList" layoutX="304.0" layoutY="337.0" onMouseClicked="#trackList_CurrentTagTracks_OnClick" prefHeight="194.0" prefWidth="627.0" />
+        <TextField fx:id="loadPath" layoutX="304.0" layoutY="546.0" prefHeight="25.0" prefWidth="442.0" />
+        <Button layoutX="754.0" layoutY="546.0" mnemonicParsing="false" onAction="#trackList_Load_OnClick" prefHeight="25.0" prefWidth="69.0" text="Load" />
+        <Label fx:id="loadingLabel" layoutX="833.0" layoutY="550.0" prefHeight="20.0" prefWidth="99.0" text="Load?">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>
